@@ -74,15 +74,7 @@ By abstracting core logic, you can swap out endpoint URLs, credentials, and vers
 - **Provider-agnostic**: works with Bonsai, Elastic Cloud, AWS OpenSearch, and self-managed clusters
 - **Pluggable authentication**: basic auth or API key out of the box
 - **Configurable SSL/TLS verification** options
-- **Exponential backoff** on 429/503 responses
 
-## Use Cases
-
-- Indexing and searching documents for web applications, logging platforms, and analytics dashboards
-- Full-text search and filtering across large datasets
-- Real-time data ingestion pipelines with bulk batching
-- Ad-hoc queries and scroll APIs for data exports
-- Easy migration between hosted Elasticsearch providers
 
 ## Installation
 
