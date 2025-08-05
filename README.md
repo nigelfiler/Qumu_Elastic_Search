@@ -29,12 +29,12 @@ For production, replace with **OAuth2.0 bearer tokens** which are more secure.
 
 To keep your search index up to date with the latest Qumu Cloud video content, run the connector on a recurring schedule as a background process. Here’s how to do it in simple terms:
 
-Set a regular interval: Decide how often you need to update your index (for example, hourly or daily).
+- Set a regular interval: Decide how often you need to update your index (for example, hourly or daily).
 
-Fetch new data: Each time the process runs, it should retrieve only the new or changed video records—such as recently uploaded videos, updated metadata, or fresh transcripts—from Qumu Cloud.
+- Fetch new data: Each time the process runs, it should retrieve only the new or changed video records—such as recently uploaded videos, updated metadata, or fresh transcripts—from Qumu Cloud.
 
-Send to Elasticsearch: The process then sends these records to your Elasticsearch-compatible service to add or update the index.
+- Send to Elasticsearch: The process then sends these records to your Elasticsearch-compatible service to add or update the index.
 
-Automate execution: Use your environment’s scheduler (for instance, a cron job on Linux or a scheduled task in a container orchestration platform) to launch the connector automatically at the chosen interval.
+- Automate execution: Use your environment’s scheduler (for instance, a cron job on Linux or a scheduled task in a container orchestration platform) to launch the connector automatically at the chosen interval.
 
-Monitor and alert: Implement simple checks so that if the process fails—due to network issues or authentication problems—you receive an alert (for example, an email or a message in your monitoring dashboard).
+- Monitor and alert: Implement simple checks so that if the process fails—due to network issues or authentication problems—you receive an alert (for example, an email or a message in your monitoring dashboard).
