@@ -6,6 +6,8 @@ This connector powers indexing and search of video content hosted in 1 or more Q
 
 By abstracting core logic, you can swap out endpoint URLs, credentials, and version-specific behaviors with minimal changes, making it ideal for any Elasticsearch-compatible service.
 
+**This sample is neither endorsed or supported by Qumu.**
+
 
 ## Features
 
