@@ -15,7 +15,7 @@ By abstracting core logic, you can swap out endpoint URLs, credentials, and vers
 
 ## Configuration
 
-Configure the connector by setting environment variables under the section: 
+Configure the connector by setting environment variables under the section:   
 **Connect to Bonsai OpenSearch**  in: qumu_connector.py (host, port, http_auth)  
 **Connect to Qumu Cloud Instance** in: run_qumu.py (domain, username, password)  
 For production, replace with **oauth2.0** token
