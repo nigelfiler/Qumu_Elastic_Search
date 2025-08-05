@@ -2,7 +2,7 @@
 
 ..Introduction..
 
-This connector provides a simple HTTP client to interact with Elasticsearch-compatible search services via the standard Elasticsearch REST API. It was originally developed for Bonsai and is integral to Qumu Cloud, our enterprise Video CMS for secure video management, distribution, and playback.
+This connector provides a simple HTTP client to interact with Elasticsearch-compatible search services via the standard Elasticsearch REST API.  It was originally developed for Bonsai and is integral to Qumu Cloud, our enterprise Video CMS for secure video management, distribution, and playback.
 
 Within Qumu Cloud, this connector powers indexing and search of video metadata, transcript text, and analytics events—enabling features such as:
 
