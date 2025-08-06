@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Qumu Search</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2em; }
+    input, button, select { padding: 6px 10px; margin: 5px; }
+    table { border-collapse: collapse; width: 100%; margin-top: 20px; font-size: 13px; }
+    th, td { border: 1px solid #ddd; padding: 6px; }
+    th { background-color: #f0f0f0; }
+    a.guid-link { color: #0066cc; text-decoration: none; }
+    a.guid-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <h2>🔍 Qumu Content Search</h2>
+
+  <select id="mode">
+    <option value="search">Search</option>
+    <option value="listAll">List All</option>
+  </select>
+
+  <input type="text" id="queryInput" placeholder="Enter search term..." size="40">
+  <button onclick="runQuery()">Go</button>
+
+  <div id="resultCount"></div>
+  <table id="resultTable">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Publisher</th>
+        <th>Duration</th>
+        <th>Published</th>
+        <th>Description</th>
+        <th>Tags</th>
+        <th>GUID</th>
+        <th>Instance</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    async function runQuery() {
+      const query = document.getElementById("queryInput").value.trim();
+      const mode = document.getElementById("mode").value;
+      const resultCount = document.getElementById("resultCount");
+      const tableBody = document.querySelector("#resultTable tbody");
+      tableBody.innerHTML = '';
+      resultCount.textContent = 'Loading...';
+
+      let body = {};
+      if (mode === 'search') {
+        if (!query) {
+          resultCount.textContent = '❌ Enter a search term.';
+          return;
+        }
+        body = {
+          size: 100,
+          query: {
+            multi_match: {
+              query: query,
+              fields: ['title', 'description', 'tags', 'publisher']
+            }
+          }
+        };
+      } else {
+        // List All: fetch all documents without sorting
+        body = {
+          size: 1000,
+          query: { match_all: {} }
+        };
+      }
+	  
+	  
+	  // Populate with your server details 
+		const response = await fetch("https://my-search-server.eu-west-1.bonsaisearch.net/qumu-content/_search", {
+        method: "POST",
+        headers: {
+          "Authorization": "Basic " + btoa("username:password"),
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(body)
+      });
+
+      const data = await response.json();
+      const hits = data?.hits?.hits || [];
+      resultCount.textContent = `✅ Found ${hits.length} result(s)`;
+
+      hits.forEach(hit => {
+        const doc = hit._source;
+        const playerUrl = doc.instance && doc.guid
+          ? `https://${doc.instance}/view/${doc.guid}`
+          : '';
+        
+        const guidLink = playerUrl
+          ? `<a href="${playerUrl}" target="_blank" class="guid-link">${doc.guid}</a>`
+          : (doc.guid || '');
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${doc.title || ''}</td>
+          <td>${doc.publisher || ''}</td>
+          <td>${formatDuration(doc.duration)}</td>
+          <td>${doc.published || ''}</td>
+          <td>${doc.description || ''}</td>
+          <td>${Array.isArray(doc.tags) ? doc.tags.join(', ') : doc.tags || ''}</td>
+          <td>${guidLink}</td>
+          <td>${doc.instance || ''}</td>
+        `;
+        tableBody.appendChild(row);
+      });
+    }
+
+    function formatDuration(ms) {
+      if (!ms) return '—';
+      const seconds = Math.floor((ms / 1000) % 60);
+      const minutes = Math.floor((ms / 1000 / 60) % 60);
+      const hours = Math.floor((ms / 1000 / 60 / 60));
+      return `${hours}h ${minutes}m ${seconds}s`;
+    }
+  </script>
+</body>
+</html>
