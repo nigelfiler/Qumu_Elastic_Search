@@ -4,7 +4,7 @@ from qumu_connector import QumuClient, index_to_bonsai, es, INDEX_NAME
 
 
 async def run():
-#Connect to Qumu Cloud Instance
+#Connect to Qumu Cloud Instance - multiple instances supported
     configs = [
         {"domain": "aaa.qumucloud.com", "username": "john.doe", "password": "my-password"},
         {"domain": "bbb.qumucloud.com", "username": "john.doe", "password": "my-password"},
