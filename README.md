@@ -39,4 +39,4 @@ To keep your search index up to date with the latest Qumu Cloud video content, r
 
 - Automate execution: Use your environment’s scheduler (for instance, a cron job on Linux or a scheduled task in a container orchestration platform) to launch the connector automatically at the chosen interval.
 
-- Monitor and alert: Implement simple checks so that if the process fails due to network issues or authentication problems—you receive an alert (for example, an email or a message in your monitoring dashboard).
+- Monitor and alert: Implement simple checks so that if the process fails due to network issues or authentication problems you receive an alert (for example, an email or a message in your monitoring dashboard).
