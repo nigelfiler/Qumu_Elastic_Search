@@ -78,7 +78,7 @@
 		const response = await fetch("https://my-search-server.eu-west-1.bonsaisearch.net/qumu-content/_search", {
         method: "POST",
         headers: {
-          "Authorization": "Basic " + btoa("my-username:my-password"),
+          "Authorization": "Basic " + btoa("my-cluster-access-key:my-cluster-access-secret"),
           "Content-Type": "application/json"
         },
         body: JSON.stringify(body)
