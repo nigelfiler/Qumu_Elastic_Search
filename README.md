@@ -40,3 +40,17 @@ To keep your search index up to date with the latest Qumu Cloud video content, r
 - Automate execution: Use your environment’s scheduler (for instance, a cron job on Linux or a scheduled task in a container orchestration platform) to launch the connector automatically at the chosen interval.
 
 - Monitor and alert: Implement simple checks so that if the process fails due to network issues or authentication problems you receive an alert (for example, an email or a message in your monitoring dashboard).
+
+
+## ⚠️ Disclaimer
+
+This is a Proof of Concept sample showing how you could utilise the Qumu API and other integration methods.
+
+This code is provided as-is No warranties are made, express or implied, including merchantability or fitness for any particular purpose. 
+
+You are free to use, modify, distribute or integrate it however you like, for any project commercial or otherwise—without restriction or obligation. 
+
+The author bears no liability for any damages or losses arising from its use. 
+
+
+
