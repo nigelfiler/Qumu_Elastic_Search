@@ -24,7 +24,7 @@ Configure the connector by setting environment variables under the section:
 - **Connect to Bonsai OpenSearch**  in: **qumu_connector.py** (host, port, http_auth)  
 - **Connect to Qumu Cloud Instance** in: **run_qumu.py** (domain, username, password) - Multiple Qumu instances supoprted
 
-For production, replace with **OAuth2.0 bearer tokens** which are more secure.
+For production, replace with Qumu **OAuth2.0 bearer tokens** which are more secure.
 
 <br>
 
