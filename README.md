@@ -29,7 +29,7 @@ For production, replace with **OAuth2.0 bearer tokens** which are more secure.
 
 ## Scheduled Indexing
 
-To keep your search index up to date with the latest Qumu Cloud video content, run the connector on a recurring schedule as a background process. Here’s how to do it in simple terms:
+To keep your search index up to date with the latest Qumu Cloud video content, run the connector on a recurring schedule as a background process, eg:
 
 - Set a regular interval: Decide how often you need to update your index (for example, hourly or daily).
 
