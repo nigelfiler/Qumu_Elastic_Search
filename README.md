@@ -6,14 +6,14 @@ This connector powers indexing and search of video content hosted in 1 or more Q
 
 By abstracting core logic, you can swap out endpoint URLs, credentials, and version specific behaviors with minimal changes, making it ideal for any Elasticsearch-compatible service.
 
-
+<br>
 ## Features
 
 - **Elasticsearch HTTP API** support (CRUD, search, bulk, scroll)
 - **Indexes Multiple Qumu Instances** 
 - **Version-aware** logic for Elasticsearch 7.x and 8.x compatibility
 - **Provider-agnostic**: Tested with Bonsai but should work with Elastic Cloud, AWS OpenSearch, and self-managed clusters
-
+<br>
 
 ## Configuration
 
@@ -23,7 +23,7 @@ Configure the connector by setting environment variables under the section:
 
 For production, replace with **OAuth2.0 bearer tokens** which are more secure.
 
-
+<br>
 
 ## Scheduled Indexing
 
@@ -38,13 +38,14 @@ To keep your search index up to date with the latest Qumu Cloud video content, r
 - Automate execution: Use your environment’s scheduler (for instance, a cron job on Linux or a scheduled task in a container orchestration platform) to launch the connector automatically at the chosen interval.
 
 - Monitor and alert: Implement simple checks so that if the process fails due to network issues or authentication problems you receive an alert (for example, an email or a message in your monitoring dashboard).
+<br>
 
 ## Search Tool
 
 **Basic search tool** [Screenshot:](./search-results.jpg) **Qumu_federated_search.html** to query Bonsai Elasticsearch server:
  [**Search Tool**](./src/Qumu_federated_search.html)
 
- 
+ <br>
 ## ⚠️ Disclaimer
 
 This is a Proof of Concept sample showing how you could utilise the Qumu API and other integration methods.
