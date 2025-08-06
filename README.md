@@ -11,7 +11,7 @@ By abstracting core logic, you can swap out endpoint URLs, credentials, and vers
 ## Features
 
 - **Elasticsearch HTTP API** support (CRUD, search, bulk, scroll)
-- **Indexes Multiple Qumu Instances** [Screenshot:](./index.jpg)
+- **Indexes Multiple Qumu Instances** [Screenshot](./index.jpg)
 - **Version-aware** logic for Elasticsearch 7.x and 8.x compatibility
 - **Provider-agnostic**: Tested with Bonsai but should work with Elastic Cloud, AWS OpenSearch, and self-managed clusters
 <br>
