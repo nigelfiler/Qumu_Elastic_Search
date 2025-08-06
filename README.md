@@ -45,7 +45,7 @@ To keep your search index up to date with the latest Qumu Cloud video content, r
 
 ## Search Tool
 
-**Basic search tool** [Screenshot:](./search-results.jpg) **Qumu_federated_search.html** to query Bonsai Elasticsearch server:
+**Basic search tool** [Screenshot](./search-results.jpg) **Qumu_federated_search.html** to query Bonsai Elasticsearch server:
  [**Search Tool**](./src/Qumu_federated_search.html)
 
 <br>
