@@ -56,7 +56,7 @@ This is a Proof of Concept sample showing how you could utilise the Qumu API and
 
 This code is provided **as-is**. No warranties are made, express or implied, including merchantability or fitness for any particular purpose. 
 
-You are free to use, modify, distribute or integrate it however you like, for any project commercial or otherwise—without restriction or obligation. 
+You are free to use, modify, distribute or integrate it however you like, for any project commercial or otherwise without restriction or obligation. 
 
 The author bears no liability for any damages or losses arising from its use. 
 
