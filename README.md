@@ -45,7 +45,8 @@ To keep your search index up to date with the latest Qumu Cloud video content, r
 **Basic search tool** [Screenshot:](./search-results.jpg) **Qumu_federated_search.html** to query Bonsai Elasticsearch server:
  [**Search Tool**](./src/Qumu_federated_search.html)
 
- <br>
+<br>
+ 
 ## ⚠️ Disclaimer
 
 This is a Proof of Concept sample showing how you could utilise the Qumu API and other integration methods.
